@@ -1,0 +1,7 @@
+<app-typing-text [current-word-index]="currentWordIndex"  [type-text]="text" [typed-text]="typedText" #typingComponent></app-typing-text>
+
+<app-typed-text (onTextChanged)="onTypedTextChanged($event)" (onNextWord)="handleNextWord($event)"></app-typed-text>
+
+<app-timer [minutes]="totalMinutes" [seconds]="totalSeconds" (remaningSeconds)="getRemainingSeconds($event)" (timesUp)="onTimeUp()">
+
+</app-timer>

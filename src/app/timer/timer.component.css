@@ -1,0 +1,21 @@
+svg {
+  display: block;
+  margin: 50px auto;
+}
+
+#loader 
+{ fill: #0088cc }
+
+#border 
+{ fill: #00517a }
+
+.timer-main {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #00517a;
+    padding : 20px 10px 20px 30px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: monospace;
+    color: white;
+}

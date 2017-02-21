@@ -1,0 +1,21 @@
+#type-input {
+    display: inline !important;
+    border: none;
+}
+
+#type-input:focus {
+    border: none;
+    outline: none;
+}
+
+
+
+.typed-text {
+    display: inline;
+    word-break: break-all;
+}
+
+#typed-text {
+    max-height: 200px;
+    overflow: hidden;
+}

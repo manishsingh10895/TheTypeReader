@@ -1,0 +1,53 @@
+<div class="ui center aligned header top-padding page-title">
+    Result
+  </div>
+<div class="text-results ui container">
+  <div class="ui one statistics">
+    <div class="statistic" >
+      <div class="value">
+        <i class="clock icon"></i>
+         {{stats.formattedTimeTaken}}
+      </div>
+      <div class="label">
+        Time Taken 
+      </div>
+    </div>
+  </div>
+  <div class="ui three statistics">
+    <div class="statistic" >
+      <div class="value">
+         <i class="thumbs icon" [ngClass] = "{ 'up': prevStats.grossSpeed <= stats.grossSpeed, 'down': prevStats.grossSpeed > stats.grossSpeed }" ></i> {{stats.grossSpeed}}
+      </div>
+      <div class="label">
+        Gross Speed
+      </div>
+    </div>
+    <div class="statistic">
+      <div class="value">
+         <i class="thumbs icon" 
+          [ngClass] = "{ 'up': prevStats.accuracy <= stats.accuracy, 'down': prevStats.accuracy > stats.accuracy }" ></i>
+        {{stats.accuracy}}
+      </div>
+      <div class="label">
+        Accuracy
+      </div>
+    </div>
+    <div class="statistic">
+      <div class="value">
+         <i class="thumbs icon" 
+          [ngClass] = "{ 'up': prevStats.netSpeed <= stats.netSpeed, 'down': prevStats.netSpeed > stats.netSpeed }" ></i>
+        {{stats.netSpeed}}
+      </div>
+
+      <div class="label">
+        Net Speed
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="chart-results">
+  <div id="stat-chart">
+    
+  </div>
+</div>

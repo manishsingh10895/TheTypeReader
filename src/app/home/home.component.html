@@ -1,0 +1,175 @@
+  <div class="ui center aligned header top-padding page-title">
+    Choose Your News
+  </div>
+  
+  <div class="ui centered items" id="news-types">
+
+          <div class="center aligned item news-type" [ngClass]="{ 'selected': selectedNewsType==='business' }" (click)="handleNewsTypeClick('business')">
+            <div class="ui small image">
+              <i class="suitcase icon massive"></i>
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                Business
+              </div>
+              <div class="description">
+                Something's getting sold
+              </div>
+              <div class="extra">
+                <button class="ui right floated primary button source-button" (click)="viewSources($event,'business')" (mouseover)="sourcesHover($event)">
+                  Sources
+                  <i class="caret right icon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="center aligned item news-type" (click)="handleNewsTypeClick('technology')" [ngClass]="{ 'selected': selectedNewsType==='technology' }">
+            <div class="ui small image">
+              <i class="desktop icon massive"></i>
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                Technology
+              </div>
+              <div class="description">
+                Maybe there's a new Iphone
+              </div>
+              <div class="extra">
+                <button class="ui right floated primary button source-button" (click)="viewSources($event,'technology')" (mouseover)="sourcesHover($event)">
+                  Sources
+                  <i class="caret right icon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="center aligned item news-type" (click)="handleNewsTypeClick('sports')" [ngClass]="{ 'selected': selectedNewsType==='sports' }">
+            <div class="ui small image">
+              <i class="trophy icon massive"></i>
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                Sports
+              </div>
+              <div class="description">
+                Messi played Kabaddi, OR did he ?
+              </div>
+              <div class="extra">
+                <button class="ui right floated primary button source-button" (click)="viewSources($event,'sports')" (mouseover)="sourcesHover($event)">
+                  Sources
+                  <i class="caret right icon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="center aligned item news-type" (click)="handleNewsTypeClick('entertainment')" [ngClass]="{ 'selected': selectedNewsType==='entertainment' }">
+            <div class="ui small image">
+              <i class="film icon massive"></i>
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                Entertainment
+              </div>
+              <div class="description">
+                Kim Kardashian nudes leaked ... again
+              </div>
+              <div class="extra">
+                <button class="ui right floated primary button source-button" (click)="viewSources($event,'entertainment')" (mouseover)="sourcesHover($event)">
+                  Sources
+                  <i class="caret right icon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="center aligned item news-type" (click)="handleNewsTypeClick('general')" [ngClass]="{ 'selected': selectedNewsType==='general' }">
+            <div class="ui small image">
+              <i class="newspaper icon massive"></i>
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                General
+              </div>
+              <div class="description">
+                Everything other thing in the world
+
+                <div class="extra">
+                  <button class="ui right floated primary button source-button" (click)="viewSources($event,'general')" (mouseover)="sourcesHover($event)">
+                    Sources
+                    <i class="caret right icon"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="ui center aligned header top-padding page-title">
+      How much money ?
+    </div>
+
+    <div class="ui container time-container">
+      <div class="ui two column  centered grid">
+        <div class="center aligned column">
+          <div class="ui right labeled input">
+            <input type="number" #minutes (change)="handleMinuteChange(minutes.value)" placeholder="Minutes" class="ui input text" [disabled]="endless">
+            <div class="ui basic label">
+              min
+            </div>
+          </div>
+
+          <div class="ui right labeled input">
+            <input type="number" #seconds (change)="handleSecondChange(seconds.value)" placeholder="Seconds" class="ui input text" [disabled]="endless">
+            <div class="ui basic label">
+              sec
+            </div>
+          </div>
+        </div>
+
+        <div class="center aligned column">
+          <div class="ui button large" (click)="toggleEndless()" [ngClass]="{ 'on': endless, 'off': !endless }">Let it Go long</div>
+        </div>
+      </div>
+    </div>
+
+    <button (click)="goTyping()" class="ui icon fab button">
+      <i class="fa fa-caret-right"></i>
+    </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Modal-->
+
+    <div class="ui modal">
+      <div class="header">
+        Sources
+      </div>
+      <div class="content">
+        <div class="ui horizontal list">
+          <div class="item" *ngFor="let source of sources">
+            <img [src]="source.urlsToLogos.small" alt="" class="ui avatar image">
+            <div class="content">
+              <div class="header">
+                {{source.name}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+

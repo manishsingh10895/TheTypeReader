@@ -1,0 +1,9 @@
+<div class="ui text container segment typing-text" id="typing-text">
+
+  <span *ngFor="let w of words | words; let i = index" 
+    [ngClass]="{'currentWord': currentWordIndex === i, 'word': true, 'correct-word': wordStatus[i].status === 0, 'incorrect-word': wordStatus[i].status === 1, 'title': wordStatus[i].title, 'description': wordStatus[i].description, 'title-end': wordStatus[i].titleEnd, 'description-end': wordStatus[i].descriptionEnd}"
+    >
+    {{w}}
+  </span>
+  
+</div>

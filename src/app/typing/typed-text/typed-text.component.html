@@ -1,0 +1,6 @@
+<div class="ui text container" (click)="focusOnInput()" id="typed-text">
+  <div class="typed-text">
+   {{typedText}}
+  </div>
+  <input type="text" (keyup)="onChange($event, typeInput.value)" #typeInput id="type-input">
+</div>

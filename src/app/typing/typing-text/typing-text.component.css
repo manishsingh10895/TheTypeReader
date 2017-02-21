@@ -1,0 +1,56 @@
+.currentWord {
+    background-color: rgba(81, 173, 172, 0.29);
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.word {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.incorrect-word {
+    color: red;
+    font-weight: bold;
+}
+
+.correct-word {
+    color: palegreen;
+    font-weight: bold;
+}
+
+.typing-text {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.title {
+    font-size : 30px;
+    font-weight: bold;
+}
+
+.description  {
+    font-size: 13px;
+}
+
+.title-end {
+    font-size : 30px;
+    font-weight: bold;
+}
+
+.description-end {
+    font-size: 13px;
+}
+
+.title-end::after, .description-end::after {
+    content: " ";
+    display: block;
+    width: 0px;
+}
+
+.title-end::after {
+    /*margin-bottom: 10px;*/
+}
+
+.description-end::after {
+    margin-bottom: 30px;
+}

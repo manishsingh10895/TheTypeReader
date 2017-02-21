@@ -1,0 +1,21 @@
+.top-padding {
+    padding-top : 20px;
+}
+
+.page-title {
+    background-color: #023638;
+    color: white;
+}
+.up {
+    color: green;
+}
+
+.down {
+    color: red;
+}
+
+.statistics { 
+    padding-top: 50px;
+}
+
+:host { width: 100%; display: block; position: absolute; }
